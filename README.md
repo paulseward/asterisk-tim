@@ -24,7 +24,11 @@ ln -s /etc/asterisk/TIM/Audio /usr/share/asterisk/sounds/TIM
 * Steer a number in your dialplan (eg 123) towards the TIM macro
 ```
 ;; 123 - Speaking clock
-exten => 123,1,Macro(TIM)
+; ${VOICE} indicates the voice to use, the following voices are available:
+; "PAT" - Pat Simmons
+
+exten => 123,1,Macro(TIM,${VOICE})
+
 ```
 * If you're not already doing so, install and configure "ntpd" to sync your servers clock with an internet time source
 
