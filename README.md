@@ -6,9 +6,13 @@ See: https://github.com/paulseward/asterisk-tim
 
 Voices
 ------
-* Pat Simmons, voice of the GPO Speaking clock in the UK (TIM) from 1963 to 1985
-http://en.wikipedia.org/wiki/Pat_Simmons_%28voice_actor%29
+See the Folders in the `Audio` directory for more details, but the following voices are available
 
+* "ETHEL" - Ethel Cain (Coming soon)
+* "PAT" - Pat Simmons
+* "GORDON" - Gordon Gow (Coming soon)
+
+The default voice is PAT
 
 Instalation
 -----------
@@ -32,3 +36,13 @@ exten => 123,1,Macro(TIM,${VOICE})
 ```
 * If you're not already doing so, install and configure "ntpd" to sync your servers clock with an internet time source
 
+ToDo
+----
+- Noise reduction on Pat Simmons samples
+- Prep samples for Gordon Gow
+- Record Ethel Cain
+
+Credits
+-------
+- Paul Seward - http://paulseward.com - Asterisk Macro, audio recordings for Gordon Gow and Ethel Cain
+- Andrew Emmerson - Audio recording of Pat Simmons
