@@ -4,9 +4,19 @@ Speaking clock implementation for asterisk, which uses samples from historical s
 
 See: https://github.com/paulseward/asterisk-tim
 
+Voices
+------
+* Pat Simmons, voice of the GPO Speaking clock in the UK (TIM) from 1963 to 1985
+http://en.wikipedia.org/wiki/Pat_Simmons_%28voice_actor%29
+
+
 Instalation
 -----------
 * Check this repository out into `/etc/asterisk/TIM`
+* Create a symlink to the audio files
+```
+ln -s /etc/asterisk/TIM/Audio /usr/share/asterisk/sounds/TIM
+```
 * Add an entry to `/etc/asterisk/extensions.conf` which includes the TIM macro
 ```
 ```
