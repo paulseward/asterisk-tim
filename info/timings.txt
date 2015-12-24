@@ -1,3 +1,6 @@
+TIM2000 sample set timings
+==========================
+
 length	sample
 ------	------
 2.5	at the third stroke it will be
@@ -5,5 +8,19 @@ length	sample
 1.5	[miuntes|oclock]
 2	and [seconds] seconds|precisely
 2.5	pip pip pip
+------
+10 seconds total
+
+
+GPO Speaking Clock MKII timings
+===============================
+
+length sample
+------ ------
+1.5?   at the third stroke
+2.5?   it will be [hours]
+1.5    [minutes|oclock]
+2      and [seconds] seconds|precisely
+2.5    pip pip pip
 ------
 10 seconds total
