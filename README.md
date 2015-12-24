@@ -19,24 +19,12 @@ ln -s /etc/asterisk/TIM/Audio /usr/share/asterisk/sounds/TIM
 ```
 * Add an entry to `/etc/asterisk/extensions.conf` which includes the TIM macro
 ```
+#include /etc/asterisk/TIM/macro.conf
 ```
-* Steer a number in your dialplan towards the TIM macro
+* Steer a number in your dialplan (eg 123) towards the TIM macro
 ```
-```
-
-
-To use this speaking clock:
-
-1 - copy the TIM directory to your asterisk sounds directory (eg /usr/share/asterisk/sounds/TIM)
-2 - add the [macro-SpeakingClock-PatSimmons] macro to your extensions.conf
-3 - add something like the following to make the clock available on 123
-
 ;; 123 - Speaking clock
 exten => 123,1,Macro(SpeakingClock-PatSimmons)
+```
+* If you're not already doing so, install and configure "ntpd" to sync your servers clock with an internet time source
 
-4 - If you're not already doing so, install and configure "ntpd" to sync your servers clock with an internet time source
-
-Cheers
-
--Paul
-www.paulseward.com
