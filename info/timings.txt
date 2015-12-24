@@ -1,10 +1,9 @@
-length	sample
-------	------
-2.5	at the third stroke it will be
-1.5	[hours]
-1.5	[miuntes|oclock]
-2	and [seconds] seconds|precisely
-2.5	pip pip pip
-------
+length	sample
+------	------
+2.5	at the third stroke it will be
+1.5	[hours]
+1.5	[miuntes|oclock]
+2	and [seconds] seconds|precisely
+2.5	pip pip pip
+------
 10 seconds total
-
