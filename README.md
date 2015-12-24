@@ -24,7 +24,7 @@ ln -s /etc/asterisk/TIM/Audio /usr/share/asterisk/sounds/TIM
 * Steer a number in your dialplan (eg 123) towards the TIM macro
 ```
 ;; 123 - Speaking clock
-exten => 123,1,Macro(SpeakingClock-PatSimmons)
+exten => 123,1,Macro(TIM)
 ```
 * If you're not already doing so, install and configure "ntpd" to sync your servers clock with an internet time source
 
