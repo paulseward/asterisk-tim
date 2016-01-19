@@ -18,6 +18,26 @@ The results can be found in the Processed_44KHz folder
 
 The recordings were then cut up into the appropriate sections, trimmed to length with sox:
 ```
+# Syntax : sox old.wav new.wav trim [SECOND TO START] [SECONDS DURATION].
+# eg to trim the first 2 seconds of audio
+$ sox input.wav output.wav trim 0 2
 ```
 
 The recordings were then converted to 8KHz, 8bit WAV files for asterisk playback with sox.  See convert.sh for details.
+
+## Timings
+The original recordings have spikes in them where the mechanism cut over from one optical disk to the next.  Careful measurement using the cursor tool in Audacity reveals the timings to be:
+"At the third stroke" - 1.9235s
+"It will be three" - 1.8260s
+"two" - 0.9785s
+"and 10 seconds" - 1.9865s
+"pip pip pip" - 3.2855s
+
+For the purposes of this project I have quantized the samples as follows:
+"At the third stroke" - 2s
+"It will be three" - 2s
+"two" - 1s
+"and 10 seconds" - 2s
+"pip pip pip" - 3s
+
+Feel free to contribute more historically accurate timings back to the project!
