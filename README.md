@@ -16,14 +16,18 @@ The default voice is PAT
 
 Instalation
 -----------
-* Check this repository out into `/etc/asterisk/TIM`
+* Check this repository out into `/etc/asterisk/asterisk-tim`
+```
+cd /etc/asterisk
+git clone https://github.com/paulseward/asterisk-tim.git
+```
 * Create a symlink to the audio files
 ```
-ln -s /etc/asterisk/TIM/Audio /usr/share/asterisk/sounds/TIM
+ln -s /etc/asterisk/asterisk-tim/Audio /usr/share/asterisk/sounds/TIM
 ```
 * Add an entry to `/etc/asterisk/extensions.conf` which includes the TIM macro
 ```
-#include /etc/asterisk/TIM/macro.conf
+#include /etc/asterisk/asterisk-tim/macro.conf
 ```
 * Steer a number in your dialplan (eg 123) towards the TIM macro
 ```
@@ -39,7 +43,6 @@ exten => 123,1,Macro(TIM,${VOICE})
 ToDo
 ----
 - Noise reduction on Pat Simmons samples
-- Prep samples for Gordon Gow
 - Record Ethel Cain
 
 Credits
