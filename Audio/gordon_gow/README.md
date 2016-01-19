@@ -18,9 +18,15 @@ The results can be found in the Processed_44KHz folder
 
 The recordings were then cut up into the appropriate sections, trimmed to length with sox:
 ```
-# Syntax : sox old.wav new.wav trim [SECOND TO START] [SECONDS DURATION].
+# Syntax : sox old.wav new.wav trim [POSITION] ([POSITION])
+# If a position is preceded by an equals or minus sign, it is interpreted relative to the beginning or the end of the audio,
+# respectively.  (The audio length must be known for end-relative locations to work.)
+
 # eg to trim the first 2 seconds of audio
 $ sox input.wav output.wav trim 0 2
+
+# eg to trim the last 2 seconds of audio
+$ sox input.wav output.wav trim -2
 ```
 
 The recordings were then converted to 8KHz, 8bit WAV files for asterisk playback with sox.  See convert.sh for details.
