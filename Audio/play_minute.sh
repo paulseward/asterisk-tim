@@ -1,4 +1,7 @@
 #!/bin/bash
+# needs aplay
+# from "apt-get install alsa-utils" on debian/ubuntu
+# from "yum install alsa-utils" on redhat/centos
 
 NOW_TIME_H=`date +%H`.wav
 NOW_TIME_M=`date +%M`.wav
