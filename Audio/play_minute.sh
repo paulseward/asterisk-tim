@@ -1,7 +1,11 @@
 #!/bin/bash
 # needs aplay
-# from "apt-get install alsa-utils" on debian/ubuntu
-# from "yum install alsa-utils" on redhat/centos
+#
+# On a minimal debian install, you'll need to install and configure alsa
+# sudo apt-get install alsa-base alsa-oss alsa-utils
+# sudo alsactl init
+#
+# RedHat hasn't been tested yet
 
 PREFIX=`dirname "${BASH_SOURCE[0]}"`
 
