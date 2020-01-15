@@ -1,8 +1,10 @@
 # Gordon Gow
 Gordon Gow was the voice of the Speaking clock in Australia from 1954 to 1990
-Recordings courtesy of the London Science Museum
+Recordings courtesy of the London Science Museum.
 
 https://en.wikipedia.org/wiki/Speaking_clock#Australia
+
+These recordings were made from the prototype machine built by the GPO for demostration of a new mechanism.  See "Faults" below.
 
 ## Audio Processing
 The samples in this recording were recorded as 44.1KHz, 32bit, Stereo WAV files.  The source files for these recordings can be found in the Source folder
@@ -33,17 +35,28 @@ The recordings were then converted to 8KHz, 8bit WAV files for asterisk playback
 
 ## Timings
 The original recordings have spikes in them where the mechanism cut over from one optical disk to the next.  Careful measurement using the cursor tool in Audacity reveals the timings to be:
-"At the third stroke" - 1.9235s
-"It will be three" - 1.8260s
-"two" - 0.9785s
-"and 10 seconds" - 1.9865s
-"pip pip pip" - 3.2855s
+
+* "At the third stroke" - 1.9235s
+* "It will be three" - 1.8260s
+* "two" - 0.9785s
+* "and 10 seconds" - 1.9865s
+* "pip pip pip" - 3.2855s
 
 For the purposes of this project I have quantized the samples as follows:
-"At the third stroke" - 2s
-"It will be three" - 2s
-"two" - 1s
-"and 10 seconds" - 2s
-"pip pip pip" - 3s
+
+* "At the third stroke" - 2s
+* "It will be three" - 2s
+* "two" - 1s
+* "and 10 seconds" - 2s
+* "pip pip pip" - 3s
 
 Feel free to contribute more historically accurate timings back to the project!
+
+## Faults
+These recordings were made from the prototype speaking clock machine, held by the London Science Museum.  My aim is to faithfully reproduce the audio from that machine, including the faults and quirks that it has.
+
+The original machine stores the audio on glass disks, in a seies of conncentric tracks of varying brightness.  Much like how audio is stored on cine film.
+
+The "Minutes" disk is slightly off-centre, and at some points on the disk the sensor picks up some of the adjacent track.  In most cases this bleed through is inaudible, but it is prominent on some recordings.  Most notably on the "nine"
+
+While it would be possible to correct this by reconstructing a cleaner version, I've decided to leave it as-is for this reproduction.

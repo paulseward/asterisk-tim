@@ -2,6 +2,8 @@ Asterisk TIM
 ============
 Speaking clock implementation for asterisk, which uses samples from historical speaking clocks.
 
+This project aims to recreate the machines which the recordings came from, as accurately as is reasonably possible.  This includes preserving "faults" or "quirks" of the particular machines the recordings came from.
+
 See: https://github.com/paulseward/asterisk-tim
 
 Voices
@@ -10,9 +12,11 @@ See the Folders in the `Audio` directory for more details, but the following voi
 
 * "ETHEL" - Ethel Cain (Coming soon)
 * "PAT" - Pat Simmons
-* "GORDON" - Gordon Gow (Coming soon)
+* "GORDON" - Gordon Gow
 
 The default voice is PAT
+
+For more information about each voice, and the machines they were recorded from, see the README.md in the appropriate `Audio` subdirectory.
 
 Instalation
 -----------
@@ -34,6 +38,7 @@ ln -s /etc/asterisk/asterisk-tim/Audio /usr/share/asterisk/sounds/TIM
 ;; 123 - Speaking clock
 ; ${VOICE} indicates the voice to use, the following voices are available:
 ; "PAT" - Pat Simmons
+; "GORDON" - Gordon Gow
 
 exten => 123,1,Macro(TIM,${VOICE})
 
@@ -44,6 +49,7 @@ ToDo
 ----
 - Noise reduction on Pat Simmons samples
 - Record Ethel Cain
+- Produce an alternative "Clean" Gordon Gow without the crosstalk on the minutes
 
 Credits
 -------
