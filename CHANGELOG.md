@@ -1,3 +1,8 @@
+## v0.5
+ - Documentation improvements
+ - Converted from macro to gosub
+ - Renamed `macro.conf` to `tim.conf` as it's not a macro any more
+
 ## v0.4
  - Rewrite to use a standardised set of sample names
  - Parameterised voice selection in the macro

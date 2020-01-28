@@ -29,18 +29,18 @@ git clone https://github.com/paulseward/asterisk-tim.git
 ```
 ln -s /etc/asterisk/asterisk-tim/Audio /usr/share/asterisk/sounds/TIM
 ```
-* Add an entry to `/etc/asterisk/extensions.conf` which includes the TIM macro
+* Add an entry to `/etc/asterisk/extensions.conf` which includes the TIM code
 ```
-#include /etc/asterisk/asterisk-tim/macro.conf
+#include /etc/asterisk/asterisk-tim/tim.conf
 ```
-* Steer a number in your dialplan (eg 123) towards the TIM macro
+* Steer a number in your dialplan (eg 123) towards the TIM subroutines
 ```
 ;; 123 - Speaking clock
 ; ${VOICE} indicates the voice to use, the following voices are available:
 ; "PAT" - Pat Simmons
 ; "GORDON" - Gordon Gow
 
-exten => 123,1,Macro(TIM,${VOICE})
+exten => 123,1,Gosub(TIM,s,1(${VOICE}))
 
 ```
 * If you're not already doing so, install and configure "ntpd" to sync your servers clock with an internet time source
@@ -53,5 +53,5 @@ ToDo
 
 Credits
 -------
-- Paul Seward - http://paulseward.com - Asterisk Macro, audio recordings for Gordon Gow and Ethel Cain
+- Paul Seward - http://paulseward.com - Asterisk code, audio recordings for Gordon Gow and Ethel Cain
 - Andrew Emmerson - Audio recording of Pat Simmons
