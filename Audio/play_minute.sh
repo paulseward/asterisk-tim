@@ -9,9 +9,9 @@
 
 PREFIX=`dirname "${BASH_SOURCE[0]}"`
 
-NOW_TIME_H=`date +%H`.wav
+NOW_TIME_H=`date +%I`.wav
 NOW_TIME_M=`date +%M`.wav
-NEXT_TIME_H=`date +%H --date '+1 min'`.wav
+NEXT_TIME_H=`date +%I --date '+1 min'`.wav
 NEXT_TIME_M=`date +%M --date '+1 min'`.wav
 
 aplay -q \
