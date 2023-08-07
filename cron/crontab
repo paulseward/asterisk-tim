@@ -1,0 +1,6 @@
+# Example crontab, adjust the PREFIX variable as required
+
+PREFIX="/etc/asterisk/asterisk-tim/"
+
+@reboot   ${PREFIX}/announce_ip.sh
+* * * * * ${PREFIX}/play_minute.sh
