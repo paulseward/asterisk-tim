@@ -22,6 +22,7 @@ Hours
 
 Minutes
 -------
+- 00.wav - symlink to oclock.wav
 - 01.wav
 - 02.wav
 - 03.wav
