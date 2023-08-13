@@ -8,4 +8,16 @@
 # Needs the following packages:
 # apt install espeak jq
 
-espeak "$(ip -j ro get 1 | jq .[0].prefsrc)"
+IP=$(ip addr sho | grep "inet " | sed 's/\// /' | awk '!/127.0.0.1/ {print $2}')
+echo "announcing IP: ${IP}"
+espeak -s 100 ${IP}
+sleep 1
+
+IP=$(ip addr sho | grep "inet " | sed 's/\// /' | awk '!/127.0.0.1/ {print $2}')
+echo "announcing IP: ${IP}"
+espeak -s 100 ${IP}
+sleep 1
+
+IP=$(ip addr sho | grep "inet " | sed 's/\// /' | awk '!/127.0.0.1/ {print $2}')
+echo "announcing IP: ${IP}"
+espeak -s 100 ${IP}

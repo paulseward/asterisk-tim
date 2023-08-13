@@ -8,7 +8,8 @@
 # Playback speed fudge to take account of playback overheads, you may need to tune this
 FUDGE=1.014
 
-PREFIX="$(dirname "${BASH_SOURCE[0]}")/Audio"
+cd -P "$(dirname ${BASH_SOURCE[0]})"
+PREFIX="$(pwd)/../Audio"
 
 NOW_TIME_H="$(date +%I).wav"
 NOW_TIME_M="$(date +%M).wav"
